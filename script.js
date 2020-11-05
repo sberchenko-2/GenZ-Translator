@@ -22,7 +22,7 @@ function convert() {
     let term = input[i];
     if (term in terms) {
       let possible_terms = terms[term];
-      let index = Math.floor(random()*possible_terms.length)
+      let index = Math.floor(Math.random()*possible_terms.length)
       output += possible_terms[index] + ' ';
     } else {
       output += term + ' ';
