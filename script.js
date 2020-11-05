@@ -2,13 +2,13 @@ let terms;  // dictionary mapping GenZ word to standard english translation
 main()
 
 
-function main() {
+async function main() {
   /**
    * Retrieves the terms from the back-end
    */
-  let response = fetch("../api/GetTranslations")
-  //let data = response.json()
-  console.log(response)
+  let response = await fetch("../api/GetTranslations")
+  let data = await response.json()
+  console.log(data)
 }
 
 function convert() {

@@ -3,4 +3,9 @@ import azure.functions as func
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
-    return func.HttpResponse("This HTTP triggered function executed successfully.")
+    data = ""
+    with open('api/GetTranslations/translations.json', 'r') as f:
+        for line in f.readlines():
+            data += line
+
+    return func.HttpResponse(data)
