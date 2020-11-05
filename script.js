@@ -14,7 +14,7 @@ function convert() {
   /**
    * Converts the current input and sets the text of the output-box
    */
-  let input = document.getElementById('input').textContent.toLowerCase()
+  let input = document.getElementById('input').value.toLowerCase()
   input = input.split(' ')
 
   let output = ''
@@ -29,5 +29,5 @@ function convert() {
     }
   }
 
-  document.getElementById('output').textContent = output
+  document.getElementById('output').value = output
 }
