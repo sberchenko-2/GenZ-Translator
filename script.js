@@ -6,15 +6,28 @@ async function main() {
   /**
    * Retrieves the terms from the back-end
    */
-  let response = await fetch("../api/GetTranslations");
-  console.log(response);
+  let response = await fetch("../api/GetTranslations")
   terms = await response.json();
-  console.log(terms);
 }
 
 function convert() {
   /**
    * Converts the current input and sets the text of the output-box
    */
+  let input = document.getElementById('input').textContent.toLowerCase()
+  input = input.split(' ')
 
+  let output = ''
+  for (let i = 0; i < input.length; i++) {
+    let term = input[i];
+    if (term in terms) {
+      let possible_terms = terms[term];
+      let index = Math.floor(random()*possible_terms.length)
+      output += possible_terms[index] + ' ';
+    } else {
+      output += term + ' ';
+    }
+  }
+
+  document.getElementById('output').textContent = output
 }
