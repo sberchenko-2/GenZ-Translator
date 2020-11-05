@@ -6,8 +6,10 @@ async function main() {
   /**
    * Retrieves the terms from the back-end
    */
-  let data = await fetch("../api/GetTranslations");
-  console.log(data);
+  let response = await fetch("../api/GetTranslations");
+  console.log(response);
+  terms = await response.json();
+  console.log(terms);
 }
 
 function convert() {
