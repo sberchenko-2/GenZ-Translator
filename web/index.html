@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Thicc Converter</title>
+
+  <script src="./script.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="shortcut icon" href="./media/favicon.png" type="image/x-icon"/>
+
 </head>
 <body>
+
+  <div id="main-container" class="row-flex-container">
+    <div id="translate-boxes" class="column-flex-container">
+      <textarea id="input">Enter text here</textarea>
+      <textarea id="output">Translation will be outputted here</textarea>
+    </div>
+
+    <div id="settings" class="column-flex-container">
+      <button id="convert" onclick="convert()">Convert the Thicc</button>
+    </div>
+  </div>
 
 </body>
 </html>
