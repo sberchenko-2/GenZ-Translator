@@ -7,8 +7,8 @@ function main() {
    * Retrieves the terms from the back-end
    */
   let response = fetch("../api/GetTranslations")
-  let data = response.json()
-  console.log(data)
+  //let data = response.json()
+  console.log(response)
 }
 
 function convert() {
